@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id='main-screen' class='screen'>
+      <p id='heading'>Rock Paper Scissors</p>
+      <button type="" id='play-btn' onclick=displayOverlay() ></button>
+    </div>
+    <div id='game-screen' class='screen'>
+      <div id='img-div'>
+        <img class='img-dis' src="./images/rock.png" alt="rock" id='rock'>
+        <img class='img-dis' src="./images/paper.png" alt="paper" id='paper'>
+        <img class='img-dis' src="./images/scissors.png" alt="scissors" id='scissors'>
+      </div>
+      <div>
+        <p id='option'></p>
+        <div id='scores'>
+          <p id='human-score'>0</p>
+          <p id='message'></p>
+          <p id='computer-score'>0</p>
+        </div> 
+        <p id='ai-option'></p>
+      </div>
+      <img id='ai-image' src="" alt="">
+    </div>
+    <div id='gameover-screen' class='screen'>
+      <p id='winner'></p>
+      <p>Would You like to play again</p>
+      <div>
+        <button id='yes' type="" onclick=replay()>YES</button>
+        <button id='no' type="" onclick=reset() >NO</button>
+      </div>
+    </div>
+  </body>
+  <script src='./scripts.js'></script>
+</html>

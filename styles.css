@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'Waltograph UI';
+    src: url('./fonts/WaltographUI-Bold.woff2') format('woff2'),
+        url('./fonts/WaltographUI-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Waltograph UI', monospace;
+  background-color: lightblue;
+}
+p{
+  text-align: center;
+}
+.screen{
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 100px; 
+}
+#heading{
+  font-size: 40px;
+}
+#play-btn{
+  height: 64px;
+  width: 64px;
+  border: 0 solid;
+  background-color: inherit;
+  background-image: url('./images/play.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+div#img-div{
+  margin-top: 50px;
+  display: none;
+  column-gap: 20px;
+}
+.img-dis{
+  width: 100px;
+  height: 100px;
+  transition: transform 0.5s
+  /* max-width: 100%; */
+  /* padding: 10px; */
+}
+.img-dis:hover, .active{
+  border: 0;
+  transform: scale(1.2);
+  box-shadow:0px 12px 22px 1px #333;
+}
+
+#ai-image{
+  display: none;
+  height: 100px;
+  width: 100px;
+}
+
+#main-screen{
+  margin-top: 80px;
+}
+#game-screen{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 0;
+  transition: 0.5s ease;
+  row-gap: 50px;
+}
+#option{
+  display: none;
+}
+div#scores{
+  display: none;
+  font-size: 25px;
+  text-align: center;
+}
+#gameover-screen{
+  display: none;
+  width: 50%;
+  height: auto;
+  row-gap: 40px;
+  padding: 20px;
+  height: 50%;
+  background-color: yellow;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top:20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+#gameover-screen div{
+  display: flex;
+  column-gap: 30px
+}
+p#winner{
+  font-size: 20px;
+}
+#gameover-screen div button{
+  font-family: 'Waltograph UI';
+  background-color: inherit;
+  border: 0;
+  font-size: 20px;
+}
+#gameover-screen div button:focus, #gameover-screen div button:hover{
+  color: blue;
+}
+#gameover-screen div button#no:focus, #gameover-screen div button#no:hover{
+  color: red;
+}
